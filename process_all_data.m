@@ -2,10 +2,11 @@ clear all
 close all
 
 % add code path
-addpath('/Volumes/MyBackupDrive/interactive_interface/analysis/code')
+repopath = fileparts(mfilename('fullpath'));
+addpath(fullfile(repopath, 'code'));
 
 % main folder where the data is stored
-data_folder = '/Volumes/MyBackupDrive/interactive_interface/data/';
+data_folder = fullfile(repopath, 'data');
 
 % Check the pre and post session amplitude intensity matching results.
 plot_pre_and_post_amplitude(data_folder, 'P2'); % participant P2
