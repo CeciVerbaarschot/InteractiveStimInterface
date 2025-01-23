@@ -73,6 +73,16 @@ plot_within_session_replay_performance(data_folder, 'P2'); % participant P2
 plot_within_session_replay_performance(data_folder, 'P3'); % participant P3
 plot_within_session_replay_performance(data_folder, 'C1'); % participant C1
 
+% Needs "replay_data.mat". Plots (1) a 3D representation of the chosen
+% stimulus parameters, (2) the Euclidean distance between same and different 
+% type object sensations, (3) the Eucidean distance between each created
+% sensation and the median of the correctly recognized target sensations,
+% (4) the Euclidean distance between sensations with similar and different
+% tactile characteristics.
+plot_distances_replay(data_folder, 'P2'); % participant P2
+plot_distances_replay(data_folder, 'P3'); % participant P2
+plot_distances_replay(data_folder, 'C1'); % participant P2
+
 % Check how well participants recognized a sensation from previous sessions
 % (final across session replay task)
 check_across_session_replay_performance(data_folder, 'P2'); % participant P2
